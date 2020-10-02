@@ -5,8 +5,8 @@ const controller = require ('./controller')
 const router = express.Router()
 
 router.get('/', function (req, res){
-    const filtroCarrera = req.query.carrera || null
-    controller.getCarreras (filtroCarrera)
+    const filtroEstudiante = req.query.estudiante || null
+    controller.getEstudiante (filtroEstudiante)
         .then ((data) => { // esta linea va xq es heredada
             response.success(req, res, data, 200)
         })
@@ -16,7 +16,7 @@ router.get('/', function (req, res){
 }) 
 
 router.post('/', function(req, res){
-    controller.addCarrera (req.body.nombre, req.body.abreviatura, req.body.descripcion)
+    controller.addEstudiante (req.body.cedula, req.body.nombre, req.body.apellido)
         .then((data) =>{
             response.success(req, res, data, 201)
         })
@@ -27,7 +27,7 @@ router.post('/', function(req, res){
 })
 
 router.patch('/', function(req, res){
-    controller.updateCarrera (req.body.id_carrera, req.body.nombre, req.body.abreviatura, req.body.descripcion)
+    controller.updateEstudiante (req.body.id_estudiante, req.body.cedula, req.body.nombre, req.body.apellido)
         .then((data) =>{
             response.success(req, res, data, 201)
         })
@@ -37,7 +37,7 @@ router.patch('/', function(req, res){
 })
 
 router.delete('/', function(req, res){
-    controller.deleteCarrera (req.body.id_carrera)
+    controller.deleteEstudiante (req.body.id_estudiante)
         .then((data) =>{response.success(req, res, data, 201) })
         .catch ((error) =>{response.error(req, res, error, 500)})
 })
