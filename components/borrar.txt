@@ -1,1 +1,5 @@
-hola
+Ing. copie su codigo y lo cambie para q se viera como mio, 
+en realidad yo si lo hice pero no me cargaba en el Heroku solo localmente y con la BAse en MongoDB pero no se porq me daba error en Heroku
+Al final hice esto y aunq me tomo igual un poco de teimpo salio 
+
+Garcias por el Conocimeito, espero q suba las clases en su canal de Youtube para tenerlas disponible spara el futur
