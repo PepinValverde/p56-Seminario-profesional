@@ -14,13 +14,14 @@ router.get('/', function (req, res){
             response.error(req, res, error, 500)
         })
 }) 
-router.post('/', function(req, res){ 
-    if (req.query.error == 'ok'){
-        response.error(req, res, 'Pilas no se ingreso docente, error de Ingreso', 500)
-    }else {
-        response.success(req, res, 'Ingreso Docente Listo "Papelito" ', 201)
-    }
-    
+router.post('/', function(req, res) {
+    controller.addDocente( req.body.nombre, req.body.apellido, req.body.correo_electronico )
+        .then((data) => {
+            response.success( req, res, data, 201 )        
+        })
+        .catch((error) => {
+            response.error( req, res, error, 500 )        
+        })
 })
 
 router.patch('/', function(req, res){

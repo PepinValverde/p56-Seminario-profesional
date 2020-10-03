@@ -1,5 +1,4 @@
-const storage = require('./storage')
-
+const storege  = require ('./storage')
 
 function addCarrera ( nombre, abreviatura, descripcion){
     return new Promise((resolve, reject) => {
@@ -10,14 +9,14 @@ function addCarrera ( nombre, abreviatura, descripcion){
             abreviatura: abreviatura,
             descripcion: descripcion,
         }
-        storage.add(carrera)
+        storege.add(carrera)
         resolve(carrera)
     })
 }
 
 function getCarreras (filtroCarrera){
     return new Promise((resolve, reject) => {// asincronismo con funcion flecha
-        resolve(storage.get({filtroCarrera}))
+        resolve(storege.get(filtroCarrera))
     }) 
 }
 
@@ -29,15 +28,15 @@ function updateCarrera (idCarrera, nombre, abreviatura, descripcion){
             abreviatura: abreviatura,
             descripcion: descripcion,
         }
-        const result = await storage.update (idCarrera, carrera)
+        const result = await storege.update (idCarrera, carrera)
         resolve(result)
     })
 }
 function deleteCarrera (idCarrera){
     return new Promise ((resolve, reject) =>{
         storage.delete (idCarrera)
-            .then (()=> {resolve()})
-            .catch((error) => { reject( error ) })  
+            .then (()=> {resolve(nombre)})
+            .cath (()=> {reject()})   
     })
 }
 

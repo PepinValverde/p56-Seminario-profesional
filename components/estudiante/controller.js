@@ -15,7 +15,7 @@ function addEstudiante ( cedula, nombre, apellido){
 
 function getEstudiante (filtroEstudiante){
     return new Promise((resolve, reject) => {// asincronismo con funcion flecha
-        resolve(storage.get({filtroEstudiante}))
+        resolve(storage.get(filtroEstudiante))
     }) 
 }
 

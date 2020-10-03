@@ -14,7 +14,7 @@ async function getDocente(filtroDocente){
     return docenteList
 }
 async function updateDocente(idDocente, objeto){
-    const foundDocente = await model.findOne({_id: idDocente })
+    const foundDocente = await model.findOne({ _id: idDocente })
     foundDocente.nombre = objeto.nombre
     foundDocente.apellido = objeto.apellido
     foundDocente.correo_electronico = objeto.correo_electronico

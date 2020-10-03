@@ -8,7 +8,6 @@ const mySchema = new schema({
     },
     abreviatura: {
         type: String,
-        required: true,
     },
     descripcion: String,
 })

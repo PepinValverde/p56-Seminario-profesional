@@ -23,7 +23,7 @@ async function updateEstudiante(idEstudiante, objeto){
     return result
 }
 
-function deleteEstudiante(idEstudiante){
+function deleteEstudiante( idEstudiante ){
     return model.deleteOne ({ _id: idEstudiante})
 }
 

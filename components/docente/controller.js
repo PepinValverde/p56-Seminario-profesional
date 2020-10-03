@@ -1,4 +1,3 @@
-const storage = require('./storage')
 const storege  = require ('./storage')
 
 function addDocente ( nombre, apellido, correo_electronico){
@@ -13,15 +12,15 @@ function addDocente ( nombre, apellido, correo_electronico){
     })
 }
 
-function getDocente (filtroDocente){
+function getDocente( filtroDocente ) {
     return new Promise((resolve, reject) => {
-        resolve(storege.get({filtroDocente}))
+        resolve(storege.get(filtroDocente))
     }) 
 }
 
-function updateDocente ( nombre, apellido, correo_electronico){
+function updateDocente ( idDocente, nombre, apellido, correo_electronico){
     return new Promise (async(resolve, reject) =>{
-        let carrera={
+        let docente={
             nombre: nombre,
             apellido: apellido,
             correo_electronico: correo_electronico,
