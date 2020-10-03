@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require('express')
 const response = require('../../network/response')
 const controller = require('./controller')
@@ -44,50 +43,6 @@ router.delete('/', function(req, res) {
         .catch((error) => {
             response.error( req, res, error, 500 )        
         })
-=======
-const express = require ('express')
-const response = require ('../../network/response')
-const controller = require ('./controller')
-
-const router = express.Router()
-
-router.get('/', function (req, res){
-    const filtroEstudiante = req.query.estudiante || null
-    controller.getEstudiante (filtroEstudiante)
-        .then ((data) => { // esta linea va xq es heredada
-            response.success(req, res, data, 200)
-        })
-        .catch((error)=>{
-            response.error(req, res, error, 500)
-        })
-}) 
-
-router.post('/', function(req, res){
-    controller.addEstudiante (req.body.cedula, req.body.nombre, req.body.apellido)
-        .then((data) =>{
-            response.success(req, res, data, 201)
-        })
-        .catch ((error) =>{
-            response.error(req, res, error, 500)
-        })
-
-})
-
-router.patch('/', function(req, res){
-    controller.updateEstudiante (req.body.id_estudiante, req.body.cedula, req.body.nombre, req.body.apellido)
-        .then((data) =>{
-            response.success(req, res, data, 201)
-        })
-        .catch ((error) =>{
-            response.error(req, res, error, 500)
-        })
-})
-
-router.delete('/', function(req, res){
-    controller.deleteEstudiante (req.body.id_estudiante)
-        .then((data) =>{response.success(req, res, data, 201) })
-        .catch ((error) =>{response.error(req, res, error, 500)})
->>>>>>> 48fd0e579fc7b2a5a93f3c0343a11e5f1c615eb4
 })
 
 module.exports = router
