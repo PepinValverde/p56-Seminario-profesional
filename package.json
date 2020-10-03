@@ -1,7 +1,11 @@
 {
   "name": "utcae",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Sistema de Titulacion para la Carrera de Administracion de Empresas",
+=======
+  "description": "Sistema de Titulacion para la carrera de Admin. de Empresas",
+>>>>>>> 48fd0e579fc7b2a5a93f3c0343a11e5f1c615eb4
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,12 +13,21 @@
   "keywords": [
     "utcae"
   ],
+<<<<<<< HEAD
   "author": "Guillermo Pizarro",
+=======
+  "author": "Jose Valverde",
+>>>>>>> 48fd0e579fc7b2a5a93f3c0343a11e5f1c615eb4
   "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+<<<<<<< HEAD
     "mongoose": "^5.10.7",
     "multer": "^1.4.2"
+=======
+    "exxpress": "^1.0.0",
+    "mongoose": "^5.10.7"
+>>>>>>> 48fd0e579fc7b2a5a93f3c0343a11e5f1c615eb4
   }
 }
